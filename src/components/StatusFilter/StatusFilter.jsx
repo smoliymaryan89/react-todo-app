@@ -20,7 +20,7 @@ const StatusFilter = () => {
         <div className="flex gap-[19px] items-center justify-center py-[15px] bg-white rounded-[5px] shadow-[0px_35px_50px_-15px_rgba(194,_195,_214,_0.50)]">
           <Button
             className={`text-[14px] text-secondary tracking-[-0.194px] font-bold hover:text-primary ${
-              filter === statusFilters.all ? " text-blue-500" : ""
+              filter === statusFilters.all ? " text-blue-600" : ""
             }`}
             selected={filter === statusFilters.all}
             onClick={() => handleFilterChange(statusFilters.all)}
@@ -29,7 +29,7 @@ const StatusFilter = () => {
           </Button>
           <Button
             className={`text-[14px] text-secondary tracking-[-0.194px] font-bold hover:text-primary ${
-              filter === statusFilters.active ? "text-blue-500" : ""
+              filter === statusFilters.active ? "text-blue-600" : ""
             }`}
             selected={filter === statusFilters.active}
             onClick={() => handleFilterChange(statusFilters.active)}
@@ -38,7 +38,7 @@ const StatusFilter = () => {
           </Button>
           <Button
             className={`text-[14px] text-secondary tracking-[-0.194px] font-bold hover:text-primary ${
-              filter === statusFilters.completed ? "text-blue-500" : ""
+              filter === statusFilters.completed ? "text-blue-600" : ""
             }`}
             selected={filter === statusFilters.completed}
             onClick={() => handleFilterChange(statusFilters.completed)}
