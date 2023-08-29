@@ -6,11 +6,13 @@ const TodoList = () => {
   const todos = useSelector(selectVisibleTodos);
 
   return (
-    <ul>
-      {todos.map(({ id, text, completed }) => (
-        <TodoItem key={id} id={id} text={text} completed={completed} />
-      ))}
-    </ul>
+    <div className="container">
+      <ul>
+        {todos.map(({ id, text, completed }) => (
+          <TodoItem key={id} id={id} text={text} completed={completed} />
+        ))}
+      </ul>
+    </div>
   );
 };
 
