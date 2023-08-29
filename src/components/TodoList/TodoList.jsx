@@ -4,7 +4,7 @@ import TodoItem from "../TodoItem/TodoItem";
 
 const TodoList = () => {
   const todos = useSelector(selectVisibleTodos);
-  console.log(todos);
+
   return (
     <ul>
       {todos.map(({ id, text, completed }) => (

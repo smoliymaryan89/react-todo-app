@@ -25,6 +25,9 @@ const todosSlice = createSlice({
       const index = state.findIndex((todo) => todo.id === payload);
       state.splice(index, 1);
     },
+    deleteCompletedTodo(state) {
+      return (state = state.filter((todo) => !todo.completed));
+    },
     toggleCompleted(state, { payload }) {
       for (const todo of state) {
         if (todo.id === payload) {
@@ -36,5 +39,6 @@ const todosSlice = createSlice({
   },
 });
 
-export const { addTodo, deleteTodo, toggleCompleted } = todosSlice.actions;
+export const { addTodo, deleteTodo, deleteCompletedTodo, toggleCompleted } =
+  todosSlice.actions;
 export const todosReducer = todosSlice.reducer;
